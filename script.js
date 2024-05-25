@@ -31,6 +31,7 @@ function processFile() {
 			const winningTeamNumber = round["winningTeamNumber"];
 			const attackingTeamNumber = round["attackingTeamNumber"];
 			const isAttackWin = winningTeamNumber === attackingTeamNumber;
+			const isAttacking = attackingTeamNumber === myTeamNumber;
 
 			if (winningTeamNumber === myTeamNumber) {
 				if (isAttackWin) {
@@ -40,17 +41,19 @@ function processFile() {
 				}
 			}
 
-			if (attackingTeamNumber === myTeamNumber) {
+			if (isAttacking) {
 				++myAttack[1];
 			} else {
 				++myDefense[1];
 			}
 
-			if (i === 0) {
-				attackPistolResult = winningTeamNumber === myTeamNumber ? "Win" : "Lose";
-			}
-			if (i === 12) {
-				defensePistolResult = winningTeamNumber === myTeamNumber ? "Win" : "Lose";
+			if (i === 0 || i === 12) {
+				const pistolResult = winningTeamNumber === myTeamNumber ? "Win" : "Lose";
+				if (isAttacking) {
+					attackPistolResult = pistolResult;
+				} else {
+					defensePistolResult = pistolResult;
+				}
 			}
 		});
 
