@@ -1,0 +1,72 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.container {
+	background: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	max-width: 800px;
+	width: 100%;
+	margin: 20px;
+	text-align: center;
+}
+
+label, input, button {
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+label {
+	font-weight: bold;
+	text-align: left;
+}
+
+input[type="file"] {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+input[type="number"] {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	text-align: center;
+}
+
+button {
+	background-color: #007BFF;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+.output {
+	margin-top: 30px;
+	padding: 20px;
+	background: #e0e0e0;
+	border-radius: 5px;
+	text-align: left;
+	white-space: nowrap; /* Ensure output stays on one line */
+	overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+}
+
+#copyButton {
+	margin-top: 10px;
+}

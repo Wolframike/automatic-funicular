@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JSON to xlsx line</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<h1>JSON to xlsx line</h1>
+		<label for="jsonFile">Upload JSON file: </label>
+		<input type="file" id="jsonFile" accept=".json">
+		
+		<label for="myTeamNumber">Enter your team number (1 or 2): </label>
+		<input type="number" id="myTeamNumber" min="1" max="2">
+
+		<button onclick="processFile()">Process</button>
+		
+		<div id="output" class="output"></div>
+		<button id="copyButton" onclick="copyOutput()" style="display: none;">Copy to Clipboard</button>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
